@@ -193,7 +193,7 @@
                     {
                         // Check Old Password
 
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("name"), username));
 
                         using (var rdr = cmd.ExecuteReader())
@@ -291,7 +291,7 @@
                     {
 
                         var parms = cmd.Parameters;
-                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         parms.Add(conn.CreateParameter(FormatParamName("name"), username));
                         parms.Add(conn.CreateParameter(FormatParamName("pwd"), (this.passwordFormat == MembershipPasswordFormat.Hashed ? Utils.HashPassword(password) : password)));
                         parms.Add(conn.CreateParameter(FormatParamName("email"), email));
@@ -324,7 +324,7 @@
                 {
                     using (var cmd = conn.CreateTextCommand(string.Format("DELETE FROM {0}Users WHERE blogId = {1}blogid AND userName = {1}name", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("name"), username));
 
                         try
@@ -410,7 +410,7 @@
                     {
                         using (var cmd = conn.CreateTextCommand($"SELECT username, EmailAddress, lastLoginTime FROM {tablePrefix}Users WHERE BlogID = {parmPrefix}blogid "))
                         {
-                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
 
                             using (var rdr = cmd.ExecuteReader())
                             {
@@ -481,7 +481,7 @@
                 {
                     using (var cmd = conn.CreateTextCommand(string.Format("SELECT username, EmailAddress, lastLoginTime FROM {0}Users WHERE BlogID = {1}blogid AND UserName = {1}name", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("name"), username));
 
                         using (var rdr = cmd.ExecuteReader())
@@ -520,7 +520,7 @@
                 {
                     using (var cmd = conn.CreateTextCommand(string.Format("SELECT userName FROM {0}Users WHERE BlogID = {1}blogid AND emailAddress = {1}email", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("email"), email));
 
                         using (var rdr = cmd.ExecuteReader())
@@ -666,7 +666,7 @@
                     {
                         // Check Old Password
 
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("name"), username));
 
                         using (var rdr = cmd.ExecuteReader())
@@ -717,7 +717,7 @@
                     using (var cmd = conn.CreateTextCommand(string.Format("UPDATE {0}Users SET emailAddress = {1}email WHERE BlogId = {1}blogId AND userName = {1}name", this.tablePrefix, this.parmPrefix)))
                     {
                         var parms = cmd.Parameters;
-                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         parms.Add(conn.CreateParameter(FormatParamName("name"), user.UserName));
                         parms.Add(conn.CreateParameter(FormatParamName("email"), user.Email));
 
@@ -743,7 +743,7 @@
                 {
                     using (var cmd = conn.CreateTextCommand(string.Format("SELECT password FROM {0}Users WHERE BlogID = {1}blogid AND UserName = {1}name", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("name"), username));
 
                         using (var rdr = cmd.ExecuteReader())

@@ -236,7 +236,7 @@ namespace BlogEngine.Core.Providers
                         var sqlQuery = $"DELETE FROM {tablePrefix}Blogs WHERE BlogId = {parmPrefix}BlogId";
                         using (var cmd = conn.CreateTextCommand(sqlQuery))
                         {
-                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                             cmd.ExecuteNonQuery();
                         }
 
@@ -275,133 +275,133 @@ namespace BlogEngine.Core.Providers
                     var sqlQuery = $"DELETE FROM {tablePrefix}PostTag WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}PostNotify WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}PostComment WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}PostCategory WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}Posts WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}RightRoles WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}Profiles WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}UserRoles WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}Roles WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}Rights WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}Users WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}Pages WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}StopWords WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}Settings WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}Referrers WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}PingService WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}DataStoreSettings WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}BlogRollItems WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     sqlQuery = $"DELETE FROM {tablePrefix}Categories WHERE BlogId = {parmPrefix}BlogId";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -454,8 +454,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}BlogRollItems " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -466,8 +466,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}Categories " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -478,8 +478,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}DataStoreSettings " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -490,8 +490,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}Pages " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -502,8 +502,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}PingService " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -514,8 +514,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}Profiles " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -526,8 +526,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}Referrers " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -538,8 +538,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}Rights " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -550,8 +550,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}RightRoles " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -562,8 +562,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}Settings " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -574,8 +574,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}StopWords " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -586,8 +586,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}Posts " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -598,8 +598,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}PostCategory " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -610,8 +610,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}PostComment " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -622,8 +622,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}PostNotify " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -634,8 +634,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}PostTag " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -651,8 +651,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}Users " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -663,8 +663,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}Roles " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -675,8 +675,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}UserRoles " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -719,8 +719,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}PingService " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -731,8 +731,8 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}Rights " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -743,15 +743,15 @@ namespace BlogEngine.Core.Providers
                         " FROM {0}RightRoles " +
                         " WHERE BlogID = {1}existingblogid ", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id.ToString(), System.Data.DbType.String));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("newblogid"), newBlog.Id, System.Data.DbType.Guid));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("existingblogid"), existingBlog.Id));
                         cmd.ExecuteNonQuery();
                     }
 
                     // be_Settings
                     using (var cmd = conn.CreateTextCommand($"DELETE FROM {tablePrefix}Settings WHERE BlogId = {parmPrefix}blogid"))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id));
                         cmd.ExecuteNonQuery();
                         var settings = BlogGeneratorConfig.NewBlogSettings;
                         var setValue = "";
@@ -765,7 +765,7 @@ namespace BlogEngine.Core.Providers
                             if (setValue == "[BlogName]") setValue = newBlog.Name;
                             if (setValue == "[Description]") setValue = BlogGeneratorConfig.BlogDescription;
 
-                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id.ToString()));
+                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id));
                             cmd.Parameters.Add(conn.CreateParameter(FormatParamName("name"), key));
                             cmd.Parameters.Add(conn.CreateParameter(FormatParamName("value"), setValue));
                             cmd.ExecuteNonQuery();
@@ -779,7 +779,7 @@ namespace BlogEngine.Core.Providers
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
                         var parms = cmd.Parameters;
-                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id.ToString()));
+                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id));
                         parms.Add(conn.CreateParameter(FormatParamName("catid"), catId));
                         parms.Add(conn.CreateParameter(FormatParamName("catname"), "General"));
                         parms.Add(conn.CreateParameter(FormatParamName("description"), "General topics"));
@@ -804,8 +804,8 @@ namespace BlogEngine.Core.Providers
                     // be_posttags
                     using (var cmd = conn.CreateTextCommand(string.Format("INSERT INTO {0}PostTag (BlogID, PostID, Tag) VALUES ({1}blogid, {1}id, {1}tag)", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("tag"), "welcome"));
                         cmd.ExecuteNonQuery();
                     }
@@ -813,8 +813,8 @@ namespace BlogEngine.Core.Providers
                     // be_postcategories
                     using (var cmd = conn.CreateTextCommand(string.Format("INSERT INTO {0}PostCategory (BlogID, PostID, CategoryID) VALUES ({1}blogid, {1}id, {1}cat)", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("cat"), catId));
                         cmd.ExecuteNonQuery();
                     }
@@ -823,7 +823,7 @@ namespace BlogEngine.Core.Providers
                     string widgetZone = BlogGeneratorConfig.WidgetZone;
                     using (var cmd = conn.CreateTextCommand(string.Format("INSERT INTO {0}DataStoreSettings (BlogId, ExtensionType, ExtensionId, Settings) VALUES ({1}blogid, {1}type, {1}id, {1}file)", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("type"), 1));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), "be_WIDGET_ZONE"));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("file"), widgetZone));
@@ -835,7 +835,7 @@ namespace BlogEngine.Core.Providers
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
                         var parms = cmd.Parameters;
-                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id.ToString()));
+                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id));
                         parms.Add(conn.CreateParameter(FormatParamName("name"), userName));
                         parms.Add(conn.CreateParameter(FormatParamName("pwd"), Utils.HashPassword(password)));
                         parms.Add(conn.CreateParameter(FormatParamName("email"), email));
@@ -846,13 +846,13 @@ namespace BlogEngine.Core.Providers
                     // be_Roles
                     using (var cmd = conn.CreateTextCommand(string.Format("INSERT INTO {0}Roles (BlogID, role) VALUES ({1}blogid, {1}role)", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("role"), "Administrators"));
                         cmd.ExecuteNonQuery();
                     }
                     using (var cmd = conn.CreateTextCommand(string.Format("INSERT INTO {0}Roles (BlogID, role) VALUES ({1}blogid, {1}role)", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("role"), "Anonymous"));
                         cmd.ExecuteNonQuery();
                     }
@@ -860,7 +860,7 @@ namespace BlogEngine.Core.Providers
                     // be_UserRoles
                     using (var cmd = conn.CreateTextCommand(string.Format("INSERT INTO {0}UserRoles (BlogID, UserName, Role) VALUES ({1}blogID, {1}username, {1}role)", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogID"), newBlog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), newBlog.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("username"), userName.Trim()));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("role"), "Administrators"));
                         cmd.ExecuteNonQuery();
@@ -891,7 +891,7 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand($"SELECT PostID FROM {tablePrefix}Posts WHERE BlogID = {parmPrefix}blogid "))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -930,8 +930,8 @@ namespace BlogEngine.Core.Providers
                     var sqlQuery = string.Format("SELECT PostID, Title, Description, PostContent, DateCreated, DateModified, Author, IsPublished, IsCommentEnabled, Raters, Rating, Slug, IsDeleted FROM {0}Posts WHERE BlogID = {1}blogid AND PostID = {1}id", this.tablePrefix, this.parmPrefix);
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -1125,8 +1125,8 @@ namespace BlogEngine.Core.Providers
                         {
 
                             var parms = cmd.Parameters;
-                            parms.Add(conn.CreateParameter(FormatParamName("blogid"), blogId.ToString()));
-                            parms.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                            parms.Add(conn.CreateParameter(FormatParamName("blogid"), blogId));
+                            parms.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                             parms.Add(conn.CreateParameter(FormatParamName("title"), post.Title));
                             parms.Add(conn.CreateParameter(FormatParamName("desc"), (post.Description ?? string.Empty)));
                             parms.Add(conn.CreateParameter(FormatParamName("content"), post.Content));
@@ -1181,8 +1181,8 @@ namespace BlogEngine.Core.Providers
 
                             var p = cmd.Parameters;
 
-                            p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                            p.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                            p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                            p.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                             p.Add(conn.CreateParameter(FormatParamName("title"), post.Title));
                             p.Add(conn.CreateParameter(FormatParamName("desc"), (post.Description ?? string.Empty)));
                             p.Add(conn.CreateParameter(FormatParamName("content"), post.Content));
@@ -1232,8 +1232,8 @@ namespace BlogEngine.Core.Providers
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -1241,8 +1241,8 @@ namespace BlogEngine.Core.Providers
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -1250,8 +1250,8 @@ namespace BlogEngine.Core.Providers
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -1259,8 +1259,8 @@ namespace BlogEngine.Core.Providers
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -1268,8 +1268,8 @@ namespace BlogEngine.Core.Providers
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -1297,7 +1297,7 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand($"SELECT PageID FROM {tablePrefix}Pages WHERE BlogID = {parmPrefix}blogid "))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -1334,8 +1334,8 @@ namespace BlogEngine.Core.Providers
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -1421,8 +1421,8 @@ namespace BlogEngine.Core.Providers
                     {
 
                         var parms = cmd.Parameters;
-                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        parms.Add(conn.CreateParameter(FormatParamName("id"), page.Id.ToString()));
+                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        parms.Add(conn.CreateParameter(FormatParamName("id"), page.Id));
                         parms.Add(conn.CreateParameter(FormatParamName("title"), page.Title));
                         parms.Add(conn.CreateParameter(FormatParamName("desc"), page.Description));
                         parms.Add(conn.CreateParameter(FormatParamName("content"), page.Content));
@@ -1461,8 +1461,8 @@ namespace BlogEngine.Core.Providers
                     {
                         var p = cmd.Parameters;
 
-                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        p.Add(conn.CreateParameter(FormatParamName("id"), page.Id.ToString()));
+                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        p.Add(conn.CreateParameter(FormatParamName("id"), page.Id));
                         p.Add(conn.CreateParameter(FormatParamName("title"), page.Title));
                         p.Add(conn.CreateParameter(FormatParamName("desc"), page.Description));
                         p.Add(conn.CreateParameter(FormatParamName("content"), page.Content));
@@ -1497,8 +1497,8 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand(string.Format("DELETE FROM {0}Pages WHERE BlogID = {1}blogid AND PageID = {1}id", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), page.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), page.Id));
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -1525,7 +1525,7 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand($"SELECT BlogRollId, Title, Description, BlogUrl, FeedUrl, Xfn, SortIndex FROM {tablePrefix}BlogRollItems WHERE BlogId = {parmPrefix}blogid "))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -1641,8 +1641,8 @@ namespace BlogEngine.Core.Providers
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), Blog.CurrentInstance.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogRollId"), blogRollItem.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogRollId"), blogRollItem.Id));
 
                         cmd.ExecuteNonQuery();
                     }
@@ -1670,7 +1670,7 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand($"SELECT CategoryID, CategoryName, description, ParentID FROM {tablePrefix}Categories WHERE BlogId = {parmPrefix}blogid "))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -1736,8 +1736,8 @@ namespace BlogEngine.Core.Providers
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
                         var parms = cmd.Parameters;
-                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        parms.Add(conn.CreateParameter(FormatParamName("catid"), category.Id.ToString()));
+                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        parms.Add(conn.CreateParameter(FormatParamName("catid"), category.Id));
                         parms.Add(conn.CreateParameter(FormatParamName("catname"), category.Title));
                         parms.Add(conn.CreateParameter(FormatParamName("description"), category.Description));
                         parms.Add(conn.CreateParameter(FormatParamName("parentid"), (category.Parent == null ? (object)DBNull.Value : category.Parent.ToString())));
@@ -1772,8 +1772,8 @@ namespace BlogEngine.Core.Providers
 
                         var p = cmd.Parameters;
 
-                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        p.Add(conn.CreateParameter(FormatParamName("catid"), category.Id.ToString()));
+                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        p.Add(conn.CreateParameter(FormatParamName("catid"), category.Id));
                         p.Add(conn.CreateParameter(FormatParamName("catname"), category.Title));
                         p.Add(conn.CreateParameter(FormatParamName("description"), category.Description));
                         p.Add(conn.CreateParameter(FormatParamName("parentid"), (category.Parent == null ? (object)DBNull.Value : category.Parent.ToString())));
@@ -1803,8 +1803,8 @@ namespace BlogEngine.Core.Providers
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("catid"), category.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("catid"), category.Id));
                         cmd.ExecuteNonQuery();
                     }
 
@@ -1812,8 +1812,8 @@ namespace BlogEngine.Core.Providers
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("catid"), category.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("catid"), category.Id));
                         cmd.ExecuteNonQuery();
                     }
                 }
@@ -1842,7 +1842,7 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand($"SELECT ReferrerId, ReferralDay, ReferrerUrl, ReferralCount, Url, IsSpam FROM {tablePrefix}Referrers WHERE BlogId = {parmPrefix}blogid "))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -1960,7 +1960,7 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand($"SELECT Link FROM {tablePrefix}PingService WHERE BlogID = {parmPrefix}blogid "))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -1999,7 +1999,7 @@ namespace BlogEngine.Core.Providers
 
                     using (var cmd = conn.CreateTextCommand($"DELETE FROM {tablePrefix}PingService WHERE BlogID = {parmPrefix}blogid "))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.ExecuteNonQuery();
 
                         foreach (var service in services)
@@ -2007,7 +2007,7 @@ namespace BlogEngine.Core.Providers
                             cmd.CommandText = string.Format("INSERT INTO {0}PingService (BlogID, Link) VALUES ({1}blogid, {1}link)", this.tablePrefix, this.parmPrefix);
                             cmd.Parameters.Clear();
 
-                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                             cmd.Parameters.Add(conn.CreateParameter(FormatParamName("link"), service));
 
                             cmd.ExecuteNonQuery();
@@ -2047,8 +2047,8 @@ namespace BlogEngine.Core.Providers
                     {
 
                         var parms = cmd.Parameters;
-                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        parms.Add(conn.CreateParameter(FormatParamName("etype"), extensionType.GetHashCode()));
+                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        parms.Add(conn.CreateParameter(FormatParamName("etype"), extensionType.GetHashCode().ToString()));
                         parms.Add(conn.CreateParameter(FormatParamName("eid"), extensionId));
 
                         o = cmd.ExecuteScalar();
@@ -2099,8 +2099,8 @@ namespace BlogEngine.Core.Providers
 
                         var p = cmd.Parameters;
 
-                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                        p.Add(conn.CreateParameter(FormatParamName("type"), extensionType.GetHashCode()));
+                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                        p.Add(conn.CreateParameter(FormatParamName("type"), extensionType.GetHashCode().ToString()));
                         p.Add(conn.CreateParameter(FormatParamName("id"), extensionId));
 
                         cmd.ExecuteNonQuery();
@@ -2135,7 +2135,7 @@ namespace BlogEngine.Core.Providers
                     {
 
                         var p = cmd.Parameters;
-                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         p.Add(conn.CreateParameter(FormatParamName("type"), extensionType.GetHashCode()));
                         p.Add(conn.CreateParameter(FormatParamName("id"), extensionId));
 
@@ -2166,7 +2166,7 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand($"SELECT SettingName, SettingValue FROM {tablePrefix}Settings WHERE BlogId = {parmPrefix}blogid "))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), blog.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -2204,7 +2204,7 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand($"DELETE FROM {tablePrefix}Settings WHERE BlogId = {parmPrefix}blogid"))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.ExecuteNonQuery();
 
                         foreach (string key in settings.Keys)
@@ -2212,7 +2212,7 @@ namespace BlogEngine.Core.Providers
                             cmd.CommandText = string.Format("INSERT INTO {0}Settings (BlogId, SettingName, SettingValue) VALUES ({1}blogid, {1}name, {1}value)", this.tablePrefix, this.parmPrefix);
                             cmd.Parameters.Clear();
 
-                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                             cmd.Parameters.Add(conn.CreateParameter(FormatParamName("name"), key));
                             cmd.Parameters.Add(conn.CreateParameter(FormatParamName("value"), settings[key]));
 
@@ -2242,7 +2242,7 @@ namespace BlogEngine.Core.Providers
                     var sqlQuery = $"SELECT RightName FROM {tablePrefix}Rights WHERE BlogId = {parmPrefix}blogid ";
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -2297,7 +2297,7 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand($"DELETE FROM {tablePrefix}Rights WHERE BlogId = {parmPrefix}blogid "))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.ExecuteNonQuery();
 
                         cmd.CommandText = $"DELETE FROM {tablePrefix}RightRoles WHERE BlogId = {parmPrefix}blogid ";
@@ -2308,7 +2308,7 @@ namespace BlogEngine.Core.Providers
                             cmd.CommandText = string.Format("INSERT INTO {0}Rights (BlogId, RightName) VALUES ({1}BlogId, {1}RightName)", this.tablePrefix, this.parmPrefix);
 
                             cmd.Parameters.Clear();
-                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), Blog.CurrentInstance.Id.ToString()));
+                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                             cmd.Parameters.Add(conn.CreateParameter(FormatParamName("RightName"), right.Name));
 
                             cmd.ExecuteNonQuery();
@@ -2318,7 +2318,7 @@ namespace BlogEngine.Core.Providers
                                 cmd.CommandText = string.Format("INSERT INTO {0}RightRoles (BlogId, RightName, Role) VALUES ({1}BlogId, {1}RightName, {1}Role)", this.tablePrefix, this.parmPrefix);
 
                                 cmd.Parameters.Clear();
-                                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), Blog.CurrentInstance.Id.ToString()));
+                                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                                 cmd.Parameters.Add(conn.CreateParameter(FormatParamName("RightName"), right.Name));
                                 cmd.Parameters.Add(conn.CreateParameter(FormatParamName("Role"), role));
 
@@ -2366,7 +2366,7 @@ namespace BlogEngine.Core.Providers
                     {
                         using (var cmd = conn.CreateTextCommand($"SELECT UserName FROM {tablePrefix}Profiles WHERE BlogID = {parmPrefix}blogid GROUP BY UserName"))
                         {
-                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
 
                             using (var rdr = cmd.ExecuteReader())
                             {
@@ -2418,7 +2418,7 @@ namespace BlogEngine.Core.Providers
                     {
                         using (var cmd = conn.CreateTextCommand(string.Format("SELECT SettingName, SettingValue FROM {0}Profiles WHERE BlogID = {1}blogid AND UserName = {1}name", this.tablePrefix, this.parmPrefix)))
                         {
-                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                             cmd.Parameters.Add(conn.CreateParameter(FormatParamName("name"), id));
 
                             using (var rdr = cmd.ExecuteReader())
@@ -2633,7 +2633,7 @@ namespace BlogEngine.Core.Providers
 
                         cmd.CommandText = sqlQuery;
                         cmd.Parameters.Clear();
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("user"), profile.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("name"), key));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("value"), dic[key]));
@@ -2656,7 +2656,7 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand(string.Format("DELETE FROM {0}Profiles WHERE BlogID = {1}blogid AND UserName = {1}name", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("name"), profile.Id));
                         cmd.ExecuteNonQuery();
                     }
@@ -2844,6 +2844,12 @@ namespace BlogEngine.Core.Providers
                         q2 = "insert into {0}CustomFields (CustomType, BlogId, ObjectId, `Key`, `Value`, `Attribute`) values ({1}customtype, {1}blogid, {1}objectid, {1}key, {1}value, {1}attribute)";
                         q3 = "update {0}CustomFields set Value = {1}value, Attribute = {1}attribute where CustomType = {1}customtype and BlogId = {1}blogid and ObjectId = {1}objectid and `Key` = {1}key";
                     }
+										else if (conPrv == "Npgsql")
+										{
+											q1 = "select count(*) from {0}CustomFields where CustomType = {1}customtype and BlogId = {1}blogid and ObjectId = {1}objectid and Key = {1}key";
+											q2 = "insert into {0}CustomFields (CustomType, BlogId, ObjectId, Key, Value, Attribute) values ({1}customtype, {1}blogid, {1}objectid, {1}key, {1}value, {1}attribute)";
+											q3 = "update {0}CustomFields set Value = {1}value, Attribute = {1}attribute where CustomType = {1}customtype and BlogId = {1}blogid and ObjectId = {1}objectid and Key = {1}key";
+										}
 
                     var sqlQuery = string.Format(q1, this.tablePrefix, this.parmPrefix);
                     object cnt;
@@ -2867,7 +2873,7 @@ namespace BlogEngine.Core.Providers
                     {
                         var p = cmd.Parameters;
                         p.Add(conn.CreateParameter(FormatParamName("customtype"), field.CustomType));
-                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         p.Add(conn.CreateParameter(FormatParamName("objectid"), field.ObjectId));
                         p.Add(conn.CreateParameter(FormatParamName("key"), field.Key));
                         p.Add(conn.CreateParameter(FormatParamName("value"), field.Value));
@@ -2890,11 +2896,15 @@ namespace BlogEngine.Core.Providers
             {
                 q = "SELECT CustomType, BlogId, ObjectId, `Key`, `Value`, `Attribute` FROM {0}CustomFields where BlogId = '{1}'";
             }
+						else if (conPrv == "Npgsql")
+						{
+							q = "SELECT CustomType, BlogId, ObjectId, Key, Value, Attribute FROM {0}CustomFields where BlogId = '{1}'::uuid";
+						}
             using (var conn = this.CreateConnection())
             {
                 if (conn.HasConnection)
                 {
-                    using (var cmd = conn.CreateTextCommand(string.Format(q, tablePrefix, Blog.CurrentInstance.Id.ToString())))
+                    using (var cmd = conn.CreateTextCommand(string.Format(q, tablePrefix, Blog.CurrentInstance.Id)))
                     {
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -2933,11 +2943,15 @@ namespace BlogEngine.Core.Providers
                     {
                         sqlQuery = "delete from {0}CustomFields where CustomType = {1}customtype and BlogId = {1}blogid and ObjectId = {1}objectid and `Key` = {1}key";
                     }
+										if (conPrv == "Npgsql")
+										{
+											sqlQuery = "delete from {0}CustomFields where CustomType = {1}customtype and BlogId = {1}blogid and ObjectId = {1}objectid and Key = {1}key";
+										}
                     using (var cmd = conn.CreateTextCommand(string.Format(sqlQuery, this.tablePrefix, this.parmPrefix)))
                     {
                         var p = cmd.Parameters;
                         p.Add(conn.CreateParameter(FormatParamName("customtype"), field.CustomType));
-                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        p.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         p.Add(conn.CreateParameter(FormatParamName("objectid"), field.ObjectId));
                         p.Add(conn.CreateParameter(FormatParamName("key"), field.Key));
                         cmd.ExecuteNonQuery();
@@ -2960,10 +2974,6 @@ namespace BlogEngine.Core.Providers
                 {
                     string conPrv = System.Web.Configuration.WebConfigurationManager.ConnectionStrings["BlogEngine"].ProviderName;
                     var sqlQuery = "delete from {0}CustomFields where CustomType = {1}customtype and BlogId = {1}blogid and ObjectId = {1}objectid";
-                    if (conPrv == "MySql.Data.MySqlClient")
-                    {
-                        sqlQuery = "delete from {0}CustomFields where CustomType = {1}customtype and BlogId = {1}blogid and ObjectId = {1}objectid";
-                    }
                     using (var cmd = conn.CreateTextCommand(string.Format(sqlQuery, this.tablePrefix, this.parmPrefix)))
                     {
                         var p = cmd.Parameters;
@@ -2994,7 +3004,7 @@ namespace BlogEngine.Core.Providers
                 {
                     using (var cmd = conn.CreateTextCommand($"SELECT StopWord FROM {tablePrefix}StopWords WHERE BlogId = {parmPrefix}blogid "))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -3052,8 +3062,8 @@ namespace BlogEngine.Core.Providers
             var sqlQuery = string.Format("DELETE FROM {0}PostCategory WHERE BlogID = {1}blogid AND PostID = {1}id", this.tablePrefix, this.parmPrefix);
             using (var cmd = conn.CreateTextCommand(sqlQuery))
             {
-                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
 
                 cmd.ExecuteNonQuery();
 
@@ -3061,9 +3071,9 @@ namespace BlogEngine.Core.Providers
                 {
                     cmd.CommandText = string.Format("INSERT INTO {0}PostCategory (BlogID, PostID, CategoryID) VALUES ({1}blogid, {1}id, {1}cat)", this.tablePrefix, this.parmPrefix);
                     cmd.Parameters.Clear();
-                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
-                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("cat"), cat.Id.ToString()));
+                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
+                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("cat"), cat.Id));
 
                     cmd.ExecuteNonQuery();
                 }
@@ -3087,8 +3097,8 @@ namespace BlogEngine.Core.Providers
 
                 var parms = cmd.Parameters;
 
-                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                parms.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                parms.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
 
                 cmd.ExecuteNonQuery();
 
@@ -3099,10 +3109,10 @@ namespace BlogEngine.Core.Providers
                     cmd.CommandText = sqlQuery;
                     parms.Clear();
 
-                    parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                    parms.Add(conn.CreateParameter(FormatParamName("postcommentid"), comment.Id.ToString()));
-                    parms.Add(conn.CreateParameter(FormatParamName("parentid"), comment.ParentId.ToString()));
-                    parms.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                    parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                    parms.Add(conn.CreateParameter(FormatParamName("postcommentid"), comment.Id));
+                    parms.Add(conn.CreateParameter(FormatParamName("parentid"), comment.ParentId));
+                    parms.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                     parms.Add(conn.CreateParameter(FormatParamName("date"), BlogSettings.Instance.ToUtc(comment.DateCreated)));
                     parms.Add(conn.CreateParameter(FormatParamName("author"), comment.Author));
                     parms.Add(conn.CreateParameter(FormatParamName("email"), comment.Email));
@@ -3137,8 +3147,8 @@ namespace BlogEngine.Core.Providers
             {
                 var parms = cmd.Parameters;
 
-                parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                parms.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                parms.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
 
                 cmd.ExecuteNonQuery();
 
@@ -3147,8 +3157,8 @@ namespace BlogEngine.Core.Providers
                     cmd.CommandText = string.Format("INSERT INTO {0}PostNotify (BlogID, PostID, NotifyAddress) VALUES ({1}blogid, {1}id, {1}notify)", this.tablePrefix, this.parmPrefix);
                     parms.Clear();
 
-                    parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                    parms.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                    parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                    parms.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                     parms.Add(conn.CreateParameter(FormatParamName("notify"), email));
 
                     cmd.ExecuteNonQuery();
@@ -3170,8 +3180,8 @@ namespace BlogEngine.Core.Providers
             var sqlQuery = string.Format("DELETE FROM {0}PostTag WHERE BlogID = {1}blogid AND PostID = {1}id", this.tablePrefix, this.parmPrefix);
             using (var cmd = conn.CreateTextCommand(sqlQuery))
             {
-                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                 cmd.ExecuteNonQuery();
 
                 foreach (var tag in post.Tags)
@@ -3179,8 +3189,8 @@ namespace BlogEngine.Core.Providers
                     cmd.CommandText = string.Format("INSERT INTO {0}PostTag (BlogID, PostID, Tag) VALUES ({1}blogid, {1}id, {1}tag)", this.tablePrefix, this.parmPrefix);
                     cmd.Parameters.Clear();
 
-                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
-                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id.ToString()));
+                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+                    cmd.Parameters.Add(conn.CreateParameter(FormatParamName("id"), post.Id));
                     cmd.Parameters.Add(conn.CreateParameter(FormatParamName("tag"), tag));
 
                     cmd.ExecuteNonQuery();
@@ -3205,8 +3215,8 @@ namespace BlogEngine.Core.Providers
         {
 
             var parms = cmd.Parameters;
-            parms.Add(conn.CreateParameter(FormatParamName("BlogId"), Blog.CurrentInstance.Id.ToString()));
-            parms.Add(conn.CreateParameter(FormatParamName("BlogRollId"), blogRollItem.Id.ToString()));
+            parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
+            parms.Add(conn.CreateParameter(FormatParamName("BlogRollId"), blogRollItem.Id));
             parms.Add(conn.CreateParameter(FormatParamName("Title"), blogRollItem.Title));
             parms.Add(conn.CreateParameter(FormatParamName("Description"), blogRollItem.Description));
             parms.Add(conn.CreateParameter(FormatParamName("BlogUrl"), (blogRollItem.BlogUrl != null ? (object)blogRollItem.BlogUrl.ToString() : DBNull.Value)));
@@ -3231,7 +3241,7 @@ namespace BlogEngine.Core.Providers
             Blog blog, DbConnectionHelper conn, DbCommand cmd)
         {
             var parms = cmd.Parameters;
-            parms.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id.ToString()));
+            parms.Add(conn.CreateParameter(FormatParamName("BlogId"), blog.Id));
             parms.Add(conn.CreateParameter(FormatParamName("BlogName"), blog.Name ?? string.Empty));
             parms.Add(conn.CreateParameter(FormatParamName("Hostname"), blog.Hostname ?? string.Empty));
             parms.Add(conn.CreateParameter(FormatParamName("IsAnyTextBeforeHostnameAccepted"), blog.IsAnyTextBeforeHostnameAccepted));
@@ -3258,8 +3268,8 @@ namespace BlogEngine.Core.Providers
         {
             var parms = cmd.Parameters;
 
-            parms.Add(conn.CreateParameter("BlogId", Blog.CurrentInstance.Id.ToString()));
-            parms.Add(conn.CreateParameter("ReferrerId", referrer.Id.ToString()));
+            parms.Add(conn.CreateParameter("BlogId", Blog.CurrentInstance.Id));
+            parms.Add(conn.CreateParameter("ReferrerId", referrer.Id));
             parms.Add(conn.CreateParameter(FormatParamName("ReferralDay"), referrer.Day));
             parms.Add(conn.CreateParameter(FormatParamName("ReferrerUrl"), (referrer.ReferrerUrl != null ? (object)referrer.ReferrerUrl.ToString() : DBNull.Value)));
             parms.Add(conn.CreateParameter(FormatParamName("ReferralCount"), referrer.Count));
@@ -3280,7 +3290,7 @@ namespace BlogEngine.Core.Providers
                     {
                         var cutoff = DateTime.Today.AddDays(-BlogSettings.Instance.NumberOfReferrerDays);
 
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("BlogId"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("ReferralDay"), cutoff));
 
                         cmd.ExecuteNonQuery();

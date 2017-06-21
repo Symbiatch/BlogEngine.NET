@@ -82,7 +82,7 @@
                             //parms.Clear();
                             //cmd.CommandText = string.Format("SELECT UserID FROM {0}Users WHERE BlogID = {1}blogid AND UserName = {1}user", this.tablePrefix, this.parmPrefix);
 
-                            //parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                            //parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                             //parms.Add(conn.CreateParameter(FormatParamName("user"), user));
 
                             //var userId = Int32.Parse(cmd.ExecuteScalar().ToString());
@@ -94,7 +94,7 @@
                                     //parms.Clear();
                                     //cmd.CommandText = string.Format("SELECT RoleID FROM {0}Roles WHERE BlogID = {1}blogid AND Role = {1}role", this.tablePrefix, this.parmPrefix);
 
-                                    //parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                                    //parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                                     //parms.Add(conn.CreateParameter(FormatParamName("role"), role));
 
                                     //var roleId = Int32.Parse(cmd.ExecuteScalar().ToString());
@@ -102,7 +102,7 @@
                                     parms.Clear();
                                     cmd.CommandText = string.Format("INSERT INTO {0}UserRoles (BlogID, UserName, Role) VALUES ({1}blogID, {1}username, {1}role)", this.tablePrefix, this.parmPrefix);
 
-                                    parms.Add(conn.CreateParameter(FormatParamName("blogID"), Blog.CurrentInstance.Id.ToString()));
+                                    parms.Add(conn.CreateParameter(FormatParamName("blogID"), Blog.CurrentInstance.Id));
                                     parms.Add(conn.CreateParameter(FormatParamName("username"), user.Trim()));
                                     parms.Add(conn.CreateParameter(FormatParamName("role"), role.Trim()));
 
@@ -130,7 +130,7 @@
                 {
                     using (var cmd = conn.CreateTextCommand(string.Format("INSERT INTO {0}Roles (BlogID, role) VALUES ({1}blogid, {1}role)", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("role"), roleName));
                         cmd.ExecuteNonQuery();
                     }
@@ -161,7 +161,7 @@
                     {
                         using (var cmd = conn.CreateTextCommand(string.Format("DELETE FROM {0}Roles WHERE BlogID = {1}blogid AND Role = {1}role", this.tablePrefix, this.parmPrefix)))
                         {
-                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                            cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                             cmd.Parameters.Add(conn.CreateParameter(FormatParamName("role"), roleName));
                             cmd.ExecuteNonQuery();
                             success = true;
@@ -202,7 +202,7 @@
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
                         var parms = cmd.Parameters;
-                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         parms.Add(conn.CreateParameter(FormatParamName("role"), roleName));
                         parms.Add(conn.CreateParameter(FormatParamName("name"), $"{usernameToMatch}%"));
 
@@ -239,7 +239,7 @@
                 {
                     using (var cmd = conn.CreateTextCommand($"SELECT role FROM {tablePrefix}Roles WHERE BlogID = {parmPrefix}blogid "))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
 
                         using (var rdr = cmd.ExecuteReader())
                         {
@@ -281,7 +281,7 @@
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("name"), username));
 
                         using (var rdr = cmd.ExecuteReader())
@@ -324,7 +324,7 @@
 
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("role"), roleName));
 
                         using (var rdr = cmd.ExecuteReader())
@@ -444,7 +444,7 @@
                     using (var cmd = conn.CreateTextCommand(sqlQuery))
                     {
                         var parms = cmd.Parameters;
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         parms.Add(conn.CreateParameter(FormatParamName("name"), username));
                         parms.Add(conn.CreateParameter(FormatParamName("role"), roleName));
                         
@@ -482,7 +482,7 @@
                             //parms.Clear();
                             //cmd.CommandText = string.Format("SELECT UserID FROM {0}Users WHERE BlogID = {1}blogid AND UserName = {1}user", this.tablePrefix, this.parmPrefix);
 
-                            //parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                            //parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                             //parms.Add(conn.CreateParameter(FormatParamName("user"), user));
                             
                             //int userId;
@@ -505,7 +505,7 @@
                                 //parms.Clear();
                                 //cmd.CommandText = string.Format("SELECT RoleID FROM {0}Roles WHERE BlogID = {1}blogid AND Role = {1}role", this.tablePrefix, this.parmPrefix);
 
-                                //parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                                //parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                                 //parms.Add(conn.CreateParameter(FormatParamName("role"), role));
 
                                 //var roleId = Int32.Parse(cmd.ExecuteScalar().ToString());
@@ -513,7 +513,7 @@
                                 parms.Clear();
                                 cmd.CommandText = string.Format("DELETE FROM {0}UserRoles WHERE BlogID = {1}blogid AND UserName = {1}username AND Role = {1}role", this.tablePrefix, this.parmPrefix);
 
-                                parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                                parms.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                                 parms.Add(conn.CreateParameter(FormatParamName("username"), user.Trim()));
                                 parms.Add(conn.CreateParameter(FormatParamName("role"), role.Trim()));
 
@@ -544,7 +544,7 @@
 
                     using (var cmd = conn.CreateTextCommand(string.Format("SELECT roleID FROM {0}Roles WHERE BlogID = {1}blogid AND role = {1}role", this.tablePrefix, this.parmPrefix)))
                     {
-                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id.ToString()));
+                        cmd.Parameters.Add(conn.CreateParameter(FormatParamName("blogid"), Blog.CurrentInstance.Id));
                         cmd.Parameters.Add(conn.CreateParameter(FormatParamName("role"), roleName));
 
                         using (var rdr = cmd.ExecuteReader())

@@ -1,3 +1,13 @@
+## BlogEngine.NET with PostgreSQL
+This repository contains the PostgreSQL port of BlogEngine.NET.
+Since BlogEngine.NET internally converts GUIDs into text before handing them over to the database provider some code changes are needed. The changes should be compatible with proper database providers, but I haven't tested them.
+
+Also since the database contains columns named Key, Value and Attribute, some databases need escaping and this seems to be hardcoded into the source code. I've added hardcoded "no need to escape" versions for PostgreSQL.
+
+Currently the code is very lightly tested, so YMMV.
+
+----
+
 This repository provides latest source code for BlogEngine.NET project and since Codeplex is shutting down, we don't release any version on Codeplex anymore.
 
 <br>
@@ -58,11 +68,10 @@ Environment:
 Steps:
   1. Clone repository
   2. Open solution in Visual Studio 2015 +
-  3. Build and run solution to load website in the browser
-  4. You can navigate to administration on: `http://localhost:64079/admin/`
-  5. Username: `admin` Password `admin`
-
-# Screenshot
-More screenshots on the [website](https://blogengine.io).
-
+  3. Create a database with use *beUser*
+  4. Add the *uuid-ossp* extension
+  5. Run the script from setup/PostgreSQL
+  6. Build and run solution to load website in the browser
+  7. Use Admin/admin to log into website administration
+   
 ![dashboard-3](https://cloud.githubusercontent.com/assets/1932785/11760070/0012f9d8-a052-11e5-84a8-e9097cb85f23.png)
